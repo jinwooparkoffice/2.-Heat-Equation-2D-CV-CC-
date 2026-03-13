@@ -1,0 +1,40 @@
+{
+  "name": "heat-equation-1d",
+  "version": "1.0.0",
+  "description": "Heat Equation 1D Calculator",
+  "type": "module",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:backend": "python app.py",
+    "dev:all": "concurrently -n \"backend,frontend\" -c \"yellow,cyan\" \"python app.py\" \"wait-on tcp:8080 && pnpm dev\"",
+    "dev:all:mac": "concurrently -n \"backend,frontend\" -c \"yellow,cyan\" \"python3 app.py\" \"wait-on tcp:8080 && pnpm dev\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^3.6.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.0.8",
+    "wait-on": "^9.0.4"
+  }
+}
